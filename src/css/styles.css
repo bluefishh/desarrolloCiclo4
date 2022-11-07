@@ -1,88 +1,40 @@
 /* GENERAL */
 
-html{
-    background-color: #F6F6C9;
-}
-
 .logo{
     position: absolute;
     height: 40px;
     width: 40px;
-    left: 50px;
 }
-.navname{
+.navbarname{
     position: relative;
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     font-weight: bolder;
     font-size: 15px;
-    left: 80px;
 }
+
+.navbarnamelink{
+    text-decoration: none;
+}
+
 .bg-navbar{
     background-color: #153462;
-    height: 55px;
 }
 
-/* HOME */
-
-.btn-secondary{
-    font-family: 'Source Sans Pro', sans-serif;
+.btn-warning{
+    background-color: #4FA095;
+    border-color: #4FA095;
     color: white;
-    background-color: #bad1c2;
-    border-color: #bad1c2;
-}
-
-.btn-register{
-    position: absolute;
-    right: 135px;
-    top: 9px;
-}
-
-.img-home{
-    position: absolute;
-    max-height: fit-content;
-    height: 500px;
-    width: 500px;
-}
-
-.card-title{
-    font-family: 'Source Sans Pro', sans-serif;
-    position: absolute;
-    font-weight: bolder;
-    font-size: 50px;
-    color: black;
-    top: 230px;
-    left: 570px;
-    background-color: #F6F6C9;
-}
-
-.card-text{
-    font-family: 'Source Sans Pro', sans-serif;
-    position: absolute;
-    background-color: #F6F6C9;
-    top: 320px;
-    left: 570px;
-    right: 100px;
-}
-
-.bi-shop{
-    margin-top: 130px;
-    margin-left: 200px;
-    color: #4FA095;
 }
 
 /* LOGIN */
 
-main{
-    background-color: #F6F6C9;
-}
 
 .fs-1{
     position: relative;
     top: 100px;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #F6F6C9;
 }
 
 .input-group{
@@ -112,4 +64,47 @@ main{
     color: black;
 }
 
-/* Footer */
+.text-white{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-info{
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    top: 250px;
+    text-align: center;
+    background-color: #4FA095;
+    border-color: #4FA095;
+}
+
+.infobutton{
+    display: flex;
+    justify-content: center;
+}
+
+.titulofiar{
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    top: 100px;
+}
+
+.table{
+    position: relative;
+}
+
+.registerlogin{
+    padding-bottom: 150px;
+}
+
+.navgestion{
+    margin-top: 29px;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open>.dropdown-toggle.btn-warning {
+    color: #fff;
+    background-color: black;
+    border-color: black; /*set the color you want here*/
+    --bs-btn-active-bg: black;
+    --bs-btn-active-border-color: black;
+}

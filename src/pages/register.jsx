@@ -1,7 +1,7 @@
 function Register({ logo }) {
     return (
         <div>
-            <main>
+            <main className="registerlogin">
                 <p className="fs-1 fw-bold">Registrarse</p>
                 <div className="container">
                     <div className="row">

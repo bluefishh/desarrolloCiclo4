@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 function Login({ logo }) {
     return (
         <div>
-            <main>
+            <main className="registerlogin">
                 <p class="fs-1 fw-bold">Iniciar sesión</p>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">
@@ -30,11 +32,11 @@ function Login({ logo }) {
                     />
                 </div>
                 <div class="btnlogin">
-                    <a href="main.html"
+                    <Link to="/gestionardeudas"
                         ><button type="button" class="btn btn-secondary">
                             Acceder
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </main>
         </div>
