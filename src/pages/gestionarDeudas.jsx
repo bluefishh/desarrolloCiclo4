@@ -1,4 +1,4 @@
-import NavbarGestion from "../navbar/navbarGestion";
+import NavbarGestion from "../components/navbar/navbarGestion";
 
 function GestionarDeuda(props) {
     return (

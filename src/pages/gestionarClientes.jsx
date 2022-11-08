@@ -1,6 +1,6 @@
-import NavbarGestion from "../navbar/navbarGestion";
+import NavbarGestion from "../components/navbar/navbarGestion";
 
-function GestionarProductos(props) {
+function GestionarClientes(props) {
     return (
         <div className="container-fluid">
                 <NavbarGestion />
@@ -10,13 +10,14 @@ function GestionarProductos(props) {
                             <table className="table table-striped-columns table-sm mt-4">
                                 <thead>
                                     <tr>
-                                        <th colspan="5">Productos</th>
+                                        <th colspan="5">Clientes</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Precio</th>
+                                        <th scope="col"># Documento</th>
+                                        <th scope="col">Nombres</th>
+                                        <th scope="col">Correo electrónico</th>
+                                        <th scope="col">Teléfono</th>
+                                        <th scope="col">Dirección</th>
                                         <th scope="col">Gestionar</th>
                                     </tr>
                                 </thead>
@@ -26,103 +27,119 @@ function GestionarProductos(props) {
                                         <td>random</td>
                                         <td>data</td>
                                         <td>placeholder</td>
+                                        <td>text</td>
                                     </tr>
                                     <tr>
                                         <td>1,002</td>
                                         <td>placeholder</td>
                                         <td>irrelevant</td>
                                         <td>visual</td>
+                                        <td>layout</td>
                                     </tr>
                                     <tr>
                                         <td>1,003</td>
                                         <td>data</td>
                                         <td>rich</td>
                                         <td>dashboard</td>
+                                        <td>tabular</td>
                                     </tr>
                                     <tr>
                                         <td>1,003</td>
                                         <td>information</td>
                                         <td>placeholder</td>
                                         <td>illustrative</td>
+                                        <td>data</td>
                                     </tr>
                                     <tr>
                                         <td>1,004</td>
                                         <td>text</td>
                                         <td>random</td>
                                         <td>layout</td>
+                                        <td>dashboard</td>
                                     </tr>
                                     <tr>
                                         <td>1,005</td>
                                         <td>dashboard</td>
                                         <td>irrelevant</td>
                                         <td>text</td>
+                                        <td>placeholder</td>
                                     </tr>
                                     <tr>
                                         <td>1,006</td>
                                         <td>dashboard</td>
                                         <td>illustrative</td>
                                         <td>rich</td>
+                                        <td>data</td>
                                     </tr>
                                     <tr>
                                         <td>1,007</td>
                                         <td>placeholder</td>
                                         <td>tabular</td>
                                         <td>information</td>
+                                        <td>irrelevant</td>
                                     </tr>
                                     <tr>
                                         <td>1,008</td>
                                         <td>random</td>
                                         <td>data</td>
                                         <td>placeholder</td>
+                                        <td>text</td>
                                     </tr>
                                     <tr>
                                         <td>1,009</td>
                                         <td>placeholder</td>
                                         <td>irrelevant</td>
                                         <td>visual</td>
+                                        <td>layout</td>
                                     </tr>
                                     <tr>
                                         <td>1,010</td>
                                         <td>data</td>
                                         <td>rich</td>
                                         <td>dashboard</td>
+                                        <td>tabular</td>
                                     </tr>
                                     <tr>
                                         <td>1,011</td>
                                         <td>information</td>
                                         <td>placeholder</td>
                                         <td>illustrative</td>
+                                        <td>data</td>
                                     </tr>
                                     <tr>
                                         <td>1,012</td>
                                         <td>text</td>
                                         <td>placeholder</td>
                                         <td>layout</td>
+                                        <td>dashboard</td>
                                     </tr>
                                     <tr>
                                         <td>1,013</td>
                                         <td>dashboard</td>
                                         <td>irrelevant</td>
                                         <td>text</td>
+                                        <td>visual</td>
                                     </tr>
                                     <tr>
                                         <td>1,014</td>
                                         <td>dashboard</td>
                                         <td>illustrative</td>
                                         <td>rich</td>
+                                        <td>data</td>
                                     </tr>
                                     <tr>
                                         <td>1,015</td>
                                         <td>random</td>
                                         <td>tabular</td>
                                         <td>information</td>
+                                        <td>text</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div className="col-md-4">
                             <h3 className="titulofiar infobutton">
-                                Crea un producto aquí:
+                                Crea un cliente aquí:
                             </h3>
                             <div className="input-group mb-3">
                                 <span
@@ -130,14 +147,48 @@ function GestionarProductos(props) {
                                     id="basic-addon1"
                                 >
                                     <span class="material-symbols-outlined">
-                                        category
+                                        badge
                                     </span>
                                 </span>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Nombre"
-                                    aria-label="Nombre"
+                                    placeholder="Número documento"
+                                    aria-label="Número documento"
+                                    aria-describedby="basic-addon1"
+                                />
+                            </div>
+                            <div className="input-group mb-3">
+                                <span
+                                    className="input-group-text"
+                                    id="basic-addon1"
+                                >
+                                    <span className="material-symbols-outlined">
+                                        person
+                                    </span>
+                                </span>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Nombres"
+                                    aria-label="Nombres"
+                                    aria-describedby="basic-addon1"
+                                />
+                            </div>
+                            <div className="input-group mb-3">
+                                <span
+                                    className="input-group-text"
+                                    id="basic-addon1"
+                                >
+                                    <span className="material-symbols-outlined">
+                                        person
+                                    </span>
+                                </span>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Apellidos"
+                                    aria-label="Apellidos"
                                     aria-describedby="basic-addon1"
                                 />
                             </div>
@@ -147,14 +198,14 @@ function GestionarProductos(props) {
                                     id="basic-addon1"
                                 >
                                     <span class="material-symbols-outlined">
-                                        description
+                                        alternate_email
                                     </span>
                                 </span>
                                 <input
-                                    type="text"
+                                    type="email"
                                     className="form-control"
-                                    placeholder="Descripción"
-                                    aria-label="Descripción"
+                                    placeholder="Correo electrónico"
+                                    aria-label="Correo electrónico"
                                     aria-describedby="basic-addon1"
                                 />
                             </div>
@@ -164,20 +215,37 @@ function GestionarProductos(props) {
                                     id="basic-addon1"
                                 >
                                     <span class="material-symbols-outlined">
-                                        attach_money
+                                        call
                                     </span>
                                 </span>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    placeholder="Precio"
-                                    aria-label="Precio"
+                                    placeholder="Teléfono"
+                                    aria-label="Teléfono"
+                                    aria-describedby="basic-addon1"
+                                />
+                            </div>
+                            <div className="input-group">
+                                <span
+                                    className="input-group-text"
+                                    id="basic-addon1"
+                                >
+                                    <span class="material-symbols-outlined">
+                                        home
+                                    </span>
+                                </span>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    placeholder="Dirección"
+                                    aria-label="Dirección"
                                     aria-describedby="basic-addon1"
                                 />
                             </div>
                             <div className="infobutton">
                                 <button type="submit" class="btn btn-info">
-                                    Crear producto
+                                    Crear cliente
                                 </button>
                             </div>
                         </div>
@@ -187,4 +255,4 @@ function GestionarProductos(props) {
     );
 }
 
-export default GestionarProductos;
+export default GestionarClientes;
