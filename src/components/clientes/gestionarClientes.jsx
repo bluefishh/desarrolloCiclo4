@@ -1,4 +1,4 @@
-import NavbarGestion from "../components/navbar/navbarGestion";
+import NavbarGestion from "../navbar/navbarGestion";
 
 function GestionarClientes(props) {
     return (
@@ -141,113 +141,121 @@ function GestionarClientes(props) {
                             <h3 className="titulofiar infobutton">
                                 Crea un cliente aquí:
                             </h3>
-                            <div className="input-group mb-3">
-                                <span
-                                    className="input-group-text"
-                                    id="basic-addon1"
-                                >
-                                    <span class="material-symbols-outlined">
-                                        badge
+                            <form>
+                                <div className="input-group mb-3">
+                                    <span
+                                        className="input-group-text"
+                                        id="basic-addon1"
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            badge
+                                        </span>
                                     </span>
-                                </span>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Número documento"
-                                    aria-label="Número documento"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <div className="input-group mb-3">
-                                <span
-                                    className="input-group-text"
-                                    id="basic-addon1"
-                                >
-                                    <span className="material-symbols-outlined">
-                                        person
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Número documento"
+                                        aria-label="Número documento"
+                                        aria-describedby="basic-addon1"
+                                        required={true}
+                                    />
+                                </div>
+                                <div className="input-group mb-3">
+                                    <span
+                                        className="input-group-text"
+                                        id="basic-addon1"
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            person
+                                        </span>
                                     </span>
-                                </span>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Nombres"
-                                    aria-label="Nombres"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <div className="input-group mb-3">
-                                <span
-                                    className="input-group-text"
-                                    id="basic-addon1"
-                                >
-                                    <span className="material-symbols-outlined">
-                                        person
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Nombres"
+                                        aria-label="Nombres"
+                                        aria-describedby="basic-addon1"
+                                        required={true}
+                                    />
+                                </div>
+                                <div className="input-group mb-3">
+                                    <span
+                                        className="input-group-text"
+                                        id="basic-addon1"
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            person
+                                        </span>
                                     </span>
-                                </span>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Apellidos"
-                                    aria-label="Apellidos"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <div className="input-group mb-3">
-                                <span
-                                    className="input-group-text"
-                                    id="basic-addon1"
-                                >
-                                    <span class="material-symbols-outlined">
-                                        alternate_email
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Apellidos"
+                                        aria-label="Apellidos"
+                                        aria-describedby="basic-addon1"
+                                        required={true}
+                                    />
+                                </div>
+                                <div className="input-group mb-3">
+                                    <span
+                                        className="input-group-text"
+                                        id="basic-addon1"
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            alternate_email
+                                        </span>
                                     </span>
-                                </span>
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    placeholder="Correo electrónico"
-                                    aria-label="Correo electrónico"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <div className="input-group mb-3">
-                                <span
-                                    className="input-group-text"
-                                    id="basic-addon1"
-                                >
-                                    <span class="material-symbols-outlined">
-                                        call
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        placeholder="Correo electrónico"
+                                        aria-label="Correo electrónico"
+                                        aria-describedby="basic-addon1"
+                                        required={true}
+                                    />
+                                </div>
+                                <div className="input-group mb-3">
+                                    <span
+                                        className="input-group-text"
+                                        id="basic-addon1"
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            call
+                                        </span>
                                     </span>
-                                </span>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Teléfono"
-                                    aria-label="Teléfono"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <div className="input-group">
-                                <span
-                                    className="input-group-text"
-                                    id="basic-addon1"
-                                >
-                                    <span class="material-symbols-outlined">
-                                        home
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Teléfono"
+                                        aria-label="Teléfono"
+                                        aria-describedby="basic-addon1"
+                                        required={true}
+                                    />
+                                </div>
+                                <div className="input-group">
+                                    <span
+                                        className="input-group-text"
+                                        id="basic-addon1"
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            home
+                                        </span>
                                     </span>
-                                </span>
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    placeholder="Dirección"
-                                    aria-label="Dirección"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <div className="infobutton">
-                                <button type="submit" class="btn btn-info">
-                                    Crear cliente
-                                </button>
-                            </div>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        placeholder="Dirección"
+                                        aria-label="Dirección"
+                                        aria-describedby="basic-addon1"
+                                        required={true}
+                                    />
+                                </div>
+                                <div className="infobutton">
+                                    <button type="submit" className="btn btn-info">
+                                        Crear cliente
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </main>

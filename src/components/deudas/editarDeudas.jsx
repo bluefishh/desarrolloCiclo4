@@ -1,4 +1,4 @@
-import NavbarGestion from "../components/navbar/navbarGestion";
+import NavbarGestion from "../navbar/navbarGestion";
 
 function EditarDeuda() {
     return (
@@ -6,13 +6,14 @@ function EditarDeuda() {
             <NavbarGestion />
             <form className="formedit">
                 <h3 className="titulofiar infobutton">Edita la deuda aquí:</h3>
-
                 <select
                     className="form-select input-group mb-3"
                     aria-label="Default select example"
                     id="selectcliente"
+                    multiple
+                    required={true}
                 >
-                    <option selected disabled>
+                    <option disabled>
                         Selecciona el cliente
                     </option>
                     <option value="1">One</option>
@@ -22,8 +23,9 @@ function EditarDeuda() {
                 <select
                     className="form-select input-group mb-3"
                     multiple
+                    required={true}
                 >
-                    <option selected disabled>
+                    <option disabled>
                         Selecciona el producto
                     </option>
                     <option value="1">One</option>
@@ -31,7 +33,7 @@ function EditarDeuda() {
                     <option value="3">Three</option>
                 </select>
                 <div className="infobutton">
-                    <button type="submit" class="btn btn-info">
+                    <button type="submit" className="btn btn-info">
                         Editar deuda
                     </button>
                 </div>

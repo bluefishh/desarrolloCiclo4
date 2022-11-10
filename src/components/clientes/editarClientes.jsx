@@ -1,4 +1,4 @@
-import NavbarGestion from "../components/navbar/navbarGestion";
+import NavbarGestion from "../navbar/navbarGestion";
 
 function EditarCliente() {
     return (
@@ -10,7 +10,7 @@ function EditarCliente() {
                 </h3>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">badge</span>
+                        <span className="material-symbols-outlined">badge</span>
                     </span>
                     <input
                         type="text"
@@ -18,6 +18,7 @@ function EditarCliente() {
                         placeholder="Número documento"
                         aria-label="Número documento"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -32,6 +33,7 @@ function EditarCliente() {
                         placeholder="Nombres"
                         aria-label="Nombres"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -46,11 +48,12 @@ function EditarCliente() {
                         placeholder="Apellidos"
                         aria-label="Apellidos"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             alternate_email
                         </span>
                     </span>
@@ -60,11 +63,12 @@ function EditarCliente() {
                         placeholder="Correo electrónico"
                         aria-label="Correo electrónico"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">call</span>
+                        <span className="material-symbols-outlined">call</span>
                     </span>
                     <input
                         type="text"
@@ -72,11 +76,12 @@ function EditarCliente() {
                         placeholder="Teléfono"
                         aria-label="Teléfono"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">home</span>
+                        <span className="material-symbols-outlined">home</span>
                     </span>
                     <input
                         type="password"
@@ -84,10 +89,11 @@ function EditarCliente() {
                         placeholder="Dirección"
                         aria-label="Dirección"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="infobutton">
-                    <button type="submit" class="btn btn-info">
+                    <button type="submit" className="btn btn-info">
                         Editar cliente
                     </button>
                 </div>

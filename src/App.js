@@ -5,12 +5,12 @@ import Home from "./pages/home";
 import Footer from "./components/footer/footer";
 import Login from "./pages/login";
 import Register from "./pages/register";
-import GestionarDeuda from "./pages/gestionarDeudas";
-import GestionarClientes from "./pages/gestionarClientes";
-import GestionarProductos from "./pages/gestionarProductos";
-import EditarDeuda from "./pages/editarDeudas";
-import EditarCliente from "./pages/editarClientes";
-import EditarProducto from "./pages/editarProductos";
+import GestionarDeuda from "./components/deudas/gestionarDeudas";
+import GestionarClientes from "./components/clientes/gestionarClientes";
+import GestionarProductos from "./components/productos/gestionarProductos";
+import EditarDeuda from "./components/deudas/editarDeudas";
+import EditarCliente from "./components/clientes/editarClientes";
+import EditarProducto from "./components/productos/editarProductos";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

@@ -1,4 +1,4 @@
-import NavbarGestion from "../components/navbar/navbarGestion";
+import NavbarGestion from "../navbar/navbarGestion";
 
 function EditarProducto() {
     return (
@@ -10,7 +10,7 @@ function EditarProducto() {
                 </h3>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">category</span>
+                        <span className="material-symbols-outlined">category</span>
                     </span>
                     <input
                         type="text"
@@ -18,11 +18,12 @@ function EditarProducto() {
                         placeholder="Nombre"
                         aria-label="Nombre"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             description
                         </span>
                     </span>
@@ -32,11 +33,12 @@ function EditarProducto() {
                         placeholder="Descripción"
                         aria-label="Descripción"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             attach_money
                         </span>
                     </span>
@@ -46,10 +48,11 @@ function EditarProducto() {
                         placeholder="Precio"
                         aria-label="Precio"
                         aria-describedby="basic-addon1"
+                        required={true}
                     />
                 </div>
                 <div className="infobutton">
-                    <button type="submit" class="btn btn-info">
+                    <button type="submit" className="btn btn-info">
                         Editar producto
                     </button>
                 </div>
