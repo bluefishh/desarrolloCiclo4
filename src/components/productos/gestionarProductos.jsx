@@ -1,5 +1,5 @@
 import NavbarGestion from "../navbar/navbarGestion";
-import Table from "../table/table";
+import MainPage from "../table/mainPage";
 import { getProducts } from "../../js/getData";
 
 function GestionarProductos(props) {
@@ -10,11 +10,11 @@ function GestionarProductos(props) {
             <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div className="row">
                     <div className="col-6 table-responsive">
-                        <Table
+                        <MainPage
                             name={"Productos"}
                             data={datosTabla}
                             path={"/gestionarproductos"}
-                            colums={["id", "brand", "description", "price"]}
+                            colums={["id", "title", "description", "price"]}
                             columsAlias={[
                                 "ID",
                                 "Nombre",

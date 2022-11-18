@@ -2393,4 +2393,26 @@ function getProducts(url, headers, httpMethod, data) {
     return products;
 }
 
-export { getUsers, getProducts };
+function getUsuario(id) {
+    let result = {};
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].id == id) {
+            result = users[i];
+            break;
+        }
+    }
+    return result;
+}
+
+function getProducto(id) {
+    let result = {};
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].id == id) {
+            result = products[i];
+            break;
+        }
+    }
+    return result;
+}
+
+export { getUsers, getProducts, getUsuario, getProducto };

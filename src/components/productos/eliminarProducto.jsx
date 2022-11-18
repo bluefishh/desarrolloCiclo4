@@ -2,7 +2,7 @@ import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
 import { getProducto } from "../../js/getData";
 
-function EditarProducto(props) {
+function EliminarProducto(props) {
     let { idProducto } = useParams();
     let producto = getProducto(idProducto);
     return (
@@ -10,7 +10,7 @@ function EditarProducto(props) {
             <NavbarGestion />
             <form className="formedit">
                 <h3 className="titulofiar infobutton">
-                    Edita el producto aquí:
+                    Elimina el siguiente producto aquí:
                 </h3>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
@@ -24,6 +24,8 @@ function EditarProducto(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={producto.id}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -38,6 +40,8 @@ function EditarProducto(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={producto.title}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -54,6 +58,8 @@ function EditarProducto(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={producto.description}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -70,11 +76,13 @@ function EditarProducto(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={producto.price}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="infobutton">
-                    <button type="submit" className="btn btn-info">
-                        Editar producto
+                    <button type="submit" className="btn btn-danger">
+                        Eliminar producto
                     </button>
                 </div>
             </form>
@@ -82,4 +90,4 @@ function EditarProducto(props) {
     );
 }
 
-export default EditarProducto;
+export default EliminarProducto;

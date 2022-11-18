@@ -2,7 +2,7 @@ import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
 import { getUsuario } from "../../js/getData";
 
-function EditarCliente(props) {
+function EliminarCliente(props) {
     let { idCliente } = useParams();
     let usuario = getUsuario(idCliente);
     return (
@@ -10,7 +10,7 @@ function EditarCliente(props) {
             <NavbarGestion />
             <form className="formedit">
                 <h3 className="titulofiar infobutton">
-                    Edita el cliente aquí:
+                    Elimina el siguiente cliente aquí:
                 </h3>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
@@ -24,6 +24,8 @@ function EditarCliente(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={usuario.id}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -40,6 +42,8 @@ function EditarCliente(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={usuario.firstName}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -56,6 +60,8 @@ function EditarCliente(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={usuario.lastName}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -72,6 +78,8 @@ function EditarCliente(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={usuario.email}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -86,6 +94,8 @@ function EditarCliente(props) {
                         aria-describedby="basic-addon1"
                         defaultValue={usuario.phone}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 {/* <div className="input-group">
@@ -103,8 +113,8 @@ function EditarCliente(props) {
                     />
                 </div> */}
                 <div className="infobutton">
-                    <button type="submit" className="btn btn-info">
-                        Editar cliente
+                    <button type="submit" className="btn btn-danger">
+                        Eliminar cliente
                     </button>
                 </div>
             </form>
@@ -112,4 +122,4 @@ function EditarCliente(props) {
     );
 }
 
-export default EditarCliente;
+export default EliminarCliente;

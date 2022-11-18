@@ -116,3 +116,21 @@
 .delupt{
     color: black;
 }
+
+.searchbar{
+    position: relative;
+    top: 20px;
+}
+
+.btn-success{
+    background-color: #4FA095;
+    border-color: #4FA095;
+}
+
+.btn-danger{
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    top: 250px;
+    text-align: center;
+}
