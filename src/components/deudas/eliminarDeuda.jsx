@@ -1,20 +1,20 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
-import { getProducto } from "../../js/getData";
+import { getDeuda } from "../../js/getData";
 
-function EditarProducto(props) {
-    let { idProducto } = useParams();
-    let producto = getProducto(idProducto);
+function EliminarDeuda() {
+    let { idDeuda } = useParams();
+    let deuda = getDeuda(idDeuda);
     return (
         <div className="container">
             <NavbarGestion />
             <form className="formedit">
                 <h3 className="titulofiar infobutton">
-                    Edita el producto aquí:
+                    Elimina la deuda aquí:
                 </h3>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span className="material-symbols-outlined"> key </span>
+                        <span className="material-symbols-outlined">badge</span>
                     </span>
                     <input
                         type="text"
@@ -22,39 +22,64 @@ function EditarProducto(props) {
                         placeholder="ID"
                         aria-label="ID"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.id}
+                        defaultValue={deuda.id}
                         required={true}
+                        readOnly={true}
                         disabled
                     />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
-                        <span className="material-symbols-outlined">category</span>
+                        <span className="material-symbols-outlined">
+                            person
+                        </span>
                     </span>
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="Nombre"
-                        aria-label="Nombre"
+                        placeholder="Cliente"
+                        aria-label="Cliente"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.title}
+                        defaultValue={deuda.cliente}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">
                         <span className="material-symbols-outlined">
-                            description
+                            category
                         </span>
                     </span>
-                    <textarea
+                    <input
                         type="text"
                         className="form-control"
-                        placeholder="Descripción"
-                        aria-label="Descripción"
+                        placeholder="Productos"
+                        aria-label="Productos"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.description}
+                        defaultValue={deuda.productos}
                         required={true}
+                        readOnly={true}
+                        disabled
+                    />
+                </div>
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                        <span class="material-symbols-outlined">
+                            date_range
+                        </span>
+                    </span>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Fecha"
+                        aria-label="Fecha"
+                        aria-describedby="basic-addon1"
+                        defaultValue={deuda.fecha}
+                        required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="input-group mb-3">
@@ -66,16 +91,18 @@ function EditarProducto(props) {
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="Precio"
-                        aria-label="Precio"
+                        placeholder="Precio total"
+                        aria-label="Precio total"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.price}
+                        defaultValue={deuda.precioTotal}
                         required={true}
+                        readOnly={true}
+                        disabled
                     />
                 </div>
                 <div className="infobutton">
-                    <button type="submit" className="btn btn-info">
-                        Editar producto
+                    <button type="submit" className="btn btn-danger">
+                        Eliminar deuda
                     </button>
                 </div>
             </form>
@@ -83,4 +110,4 @@ function EditarProducto(props) {
     );
 }
 
-export default EditarProducto;
+export default EliminarDeuda;

@@ -2385,12 +2385,43 @@ let products = [
     }
 ]
 
+let deudas = [
+    {
+        "id": 1,
+        "cliente": "Carlos",
+        "documentoCliente": 100328373,
+        "productos": "Carne",
+        "fecha": "11/1/2022",
+        "precioTotal": 3199
+    },
+    {
+        "id": 2,
+        "cliente": "Roberto",
+        "documentoCliente": 234572151,
+        "productos": "Manzanas",
+        "fecha": "12/1/2022",
+        "precioTotal": 3399
+    },
+    {
+        "id": 3,
+        "cliente": "Juan",
+        "documentoCliente": 454412147,
+        "productos": "Aceite",
+        "fecha": "10/1/2022",
+        "precioTotal": 1199
+    }
+]
+
 function getUsers(url, headers, httpMethod, data) {
     return users;
 }
 
 function getProducts(url, headers, httpMethod, data) {
     return products;
+}
+
+function getDeudas(url, headers, httpMethod, data) {
+    return deudas;
 }
 
 function getUsuario(id) {
@@ -2415,4 +2446,15 @@ function getProducto(id) {
     return result;
 }
 
-export { getUsers, getProducts, getUsuario, getProducto };
+function getDeuda(id) {
+    let result = {};
+    for (let i = 0; i < deudas.length; i++) {
+        if (deudas[i].id == id) {
+            result = deudas[i];
+            break;
+        }
+    }
+    return result;
+}
+
+export { getUsers, getProducts, getDeudas, getUsuario, getProducto, getDeuda };

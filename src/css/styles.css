@@ -134,3 +134,13 @@
     top: 250px;
     text-align: center;
 }
+
+.marginFormDeudas{
+    margin-bottom: 400px;
+}
+
+.btnFormDeuda{
+    position: relative;
+    top: -150px;
+    
+}

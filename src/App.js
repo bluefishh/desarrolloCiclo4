@@ -11,6 +11,7 @@ import GestionarProductos from "./components/productos/gestionarProductos";
 import EditarDeuda from "./components/deudas/editarDeudas";
 import EditarCliente from "./components/clientes/editarClientes";
 import EditarProducto from "./components/productos/editarProductos";
+import EliminarDeuda from "./components/deudas/eliminarDeuda";
 import EliminarCliente from "./components/clientes/eliminarCliente";
 import EliminarProducto from "./components/productos/eliminarProducto";
 import { Routes, Route } from "react-router-dom";
@@ -29,7 +30,7 @@ function App() {
                 <Route path="/gestionardeudas/update/:idDeuda" element={<EditarDeuda />} />
                 <Route path="/gestionarclientes/update/:idCliente" element={<EditarCliente />} />
                 <Route path="/gestionarproductos/update/:idProducto" element={<EditarProducto />} />
-                {/* <Route path="/gestionardeudas/delete/:idDeuda" element={} /> */}
+                <Route path="/gestionardeudas/delete/:idDeuda" element={<EliminarDeuda />} />
                 <Route path="/gestionarclientes/delete/:idCliente" element={<EliminarCliente />} />
                 <Route path="/gestionarproductos/delete/:idProducto" element={<EliminarProducto />} />
             </Routes>
