@@ -1,10 +1,18 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
-import { getUsuario } from "../../js/getData";
+import { getCliente } from "../../js/getData";
 
 function EliminarCliente(props) {
     let { idCliente } = useParams();
-    let usuario = getUsuario(idCliente);
+    let cliente = getCliente(idCliente);
+    cliente
+        .then(function (response) {
+            console.log(response);
+            return response.data._id;
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
     return (
         <div className="container">
             <NavbarGestion />
@@ -22,7 +30,7 @@ function EliminarCliente(props) {
                         placeholder="Número documento"
                         aria-label="Número documento"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.id}
+                        //defaultValue={}
                         required={true}
                         readOnly={true}
                         disabled
@@ -40,7 +48,7 @@ function EliminarCliente(props) {
                         placeholder="Nombres"
                         aria-label="Nombres"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.firstName}
+                        // defaultValue={usuario.firstName}
                         required={true}
                         readOnly={true}
                         disabled
@@ -58,7 +66,7 @@ function EliminarCliente(props) {
                         placeholder="Apellidos"
                         aria-label="Apellidos"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.lastName}
+                        // defaultValue={usuario.lastName}
                         required={true}
                         readOnly={true}
                         disabled
@@ -76,7 +84,7 @@ function EliminarCliente(props) {
                         placeholder="Correo electrónico"
                         aria-label="Correo electrónico"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.email}
+                        // defaultValue={usuario.email}
                         required={true}
                         readOnly={true}
                         disabled
@@ -92,26 +100,12 @@ function EliminarCliente(props) {
                         placeholder="Teléfono"
                         aria-label="Teléfono"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.phone}
+                        // defaultValue={usuario.phone}
                         required={true}
                         readOnly={true}
                         disabled
                     />
                 </div>
-                {/* <div className="input-group">
-                    <span className="input-group-text" id="basic-addon1">
-                        <span className="material-symbols-outlined">home</span>
-                    </span>
-                    <input
-                        type="password"
-                        className="form-control"
-                        placeholder="Dirección"
-                        aria-label="Dirección"
-                        aria-describedby="basic-addon1"
-                        defaultValue={usuario.adress}
-                        required={true}
-                    />
-                </div> */}
                 <div className="infobutton">
                     <button type="submit" className="btn btn-danger">
                         Eliminar cliente

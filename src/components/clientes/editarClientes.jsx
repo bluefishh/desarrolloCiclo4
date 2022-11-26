@@ -1,10 +1,8 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
-import { getUsuario } from "../../js/getData";
 
 function EditarCliente(props) {
     let { idCliente } = useParams();
-    let usuario = getUsuario(idCliente);
     return (
         <div className="container">
             <NavbarGestion />
@@ -22,7 +20,7 @@ function EditarCliente(props) {
                         placeholder="Número documento"
                         aria-label="Número documento"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.id}
+                        // defaultValue={usuario.id}
                         required={true}
                     />
                 </div>
@@ -38,7 +36,7 @@ function EditarCliente(props) {
                         placeholder="Nombres"
                         aria-label="Nombres"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.firstName}
+                        // defaultValue={usuario.firstName}
                         required={true}
                     />
                 </div>
@@ -54,7 +52,7 @@ function EditarCliente(props) {
                         placeholder="Apellidos"
                         aria-label="Apellidos"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.lastName}
+                        // defaultValue={usuario.lastName}
                         required={true}
                     />
                 </div>
@@ -70,7 +68,7 @@ function EditarCliente(props) {
                         placeholder="Correo electrónico"
                         aria-label="Correo electrónico"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.email}
+                        // defaultValue={usuario.email}
                         required={true}
                     />
                 </div>
@@ -84,24 +82,10 @@ function EditarCliente(props) {
                         placeholder="Teléfono"
                         aria-label="Teléfono"
                         aria-describedby="basic-addon1"
-                        defaultValue={usuario.phone}
+                        // defaultValue={usuario.phone}
                         required={true}
                     />
                 </div>
-                {/* <div className="input-group">
-                    <span className="input-group-text" id="basic-addon1">
-                        <span className="material-symbols-outlined">home</span>
-                    </span>
-                    <input
-                        type="password"
-                        className="form-control"
-                        placeholder="Dirección"
-                        aria-label="Dirección"
-                        aria-describedby="basic-addon1"
-                        defaultValue={usuario.adress}
-                        required={true}
-                    />
-                </div> */}
                 <div className="infobutton">
                     <button type="submit" className="btn btn-info">
                         Editar cliente

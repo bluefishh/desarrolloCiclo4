@@ -1,11 +1,13 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import MainPage from "../table/mainPage";
-import { getDeudas, getProducts, getUsers } from "../../js/getData";
+// import { getProducts, getUsers } from "../../js/getData";
+
+
 
 function GestionarDeuda(props) {
-    let datosDeudas = getDeudas("url", {}, "get", {});
-    let datosProductos = getProducts("url", {}, "get", {});
-    let datosClientes = getUsers("url", {}, "get", {});
+    // let datosProductos = getProducts("url", {}, "get", {});
+    // let datosClientes = getUsers("url", {}, "get", {});
+
     return (
         <div className="container-fluid">
             <NavbarGestion />
@@ -14,20 +16,18 @@ function GestionarDeuda(props) {
                     <div className="col-6 table-responsive">
                         <MainPage
                             name={"Deudas"}
-                            data={datosDeudas}
+                            data={props.datosTabla}
                             path={"/gestionardeudas"}
                             colums={[
-                                "id",
-                                "cliente",
-                                "documentoCliente",
-                                "productos",
-                                "fecha",
+                                "_id",
+                                "cliente.firstName",
+                                "productos.title",
+                                "fechaFiada",
                                 "precioTotal",
                             ]}
                             columsAlias={[
                                 "ID",
                                 "Cliente",
-                                "# Documento cliente",
                                 "Productos",
                                 "Fecha fiada",
                                 "Precio total",
@@ -47,18 +47,18 @@ function GestionarDeuda(props) {
                                 required={true}
                             >
                                 <option disabled>Selecciona el producto</option>
-                                {datosProductos.map(function (value, index) {
+                                {/* {datosProductos.map(function (value, index) {
                                     return <option>{value.title}</option>;
-                                })}
+                                })} */}
                             </select>
                             <select
                                 className="form-select selectpicker input-group marginFormDeudas"
                                 required={true}
                             >
                                 <option disabled>Selecciona el cliente</option>
-                                {datosClientes.map(function (value, index) {
+                                {/* {datosClientes.map(function (value, index) {
                                     return <option>{value.firstName} {value.lastName}</option>;
-                                })}
+                                })} */}
                             </select>
                             <div className="infobutton">
                                 <button type="submit" class="btn btn-info btnFormDeuda">
@@ -66,6 +66,7 @@ function GestionarDeuda(props) {
                                 </button>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </main>

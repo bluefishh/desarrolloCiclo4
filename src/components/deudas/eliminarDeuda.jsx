@@ -1,10 +1,10 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
-import { getDeuda } from "../../js/getData";
+// import { getDeuda } from "../../js/getData";
 
 function EliminarDeuda() {
     let { idDeuda } = useParams();
-    let deuda = getDeuda(idDeuda);
+    // let deuda = getDeuda(idDeuda);
     return (
         <div className="container">
             <NavbarGestion />
@@ -22,7 +22,7 @@ function EliminarDeuda() {
                         placeholder="ID"
                         aria-label="ID"
                         aria-describedby="basic-addon1"
-                        defaultValue={deuda.id}
+                        //defaultValue={deuda.id}
                         required={true}
                         readOnly={true}
                         disabled
@@ -40,7 +40,7 @@ function EliminarDeuda() {
                         placeholder="Cliente"
                         aria-label="Cliente"
                         aria-describedby="basic-addon1"
-                        defaultValue={deuda.cliente}
+                        //defaultValue={deuda.cliente}
                         required={true}
                         readOnly={true}
                         disabled
@@ -58,7 +58,7 @@ function EliminarDeuda() {
                         placeholder="Productos"
                         aria-label="Productos"
                         aria-describedby="basic-addon1"
-                        defaultValue={deuda.productos}
+                        //defaultValue={deuda.productos}
                         required={true}
                         readOnly={true}
                         disabled
@@ -76,7 +76,7 @@ function EliminarDeuda() {
                         placeholder="Fecha"
                         aria-label="Fecha"
                         aria-describedby="basic-addon1"
-                        defaultValue={deuda.fecha}
+                        //defaultValue={deuda.fecha}
                         required={true}
                         readOnly={true}
                         disabled
@@ -94,7 +94,7 @@ function EliminarDeuda() {
                         placeholder="Precio total"
                         aria-label="Precio total"
                         aria-describedby="basic-addon1"
-                        defaultValue={deuda.precioTotal}
+                        //defaultValue={deuda.precioTotal}
                         required={true}
                         readOnly={true}
                         disabled

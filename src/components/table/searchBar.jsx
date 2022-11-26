@@ -32,16 +32,18 @@ function Search(data, columns, search) {
     data.forEach(function (value, index) {
         included = false;
         columns.forEach(function (column, indexColum) {
-            if (
-                value[column]
-                    .toString()
-                    .toLowerCase()
-                    .indexOf(search.toString().toLowerCase()) >= 0 &&
-                !included
-            ) {
-                results.push(value);
-                included = true;
-            }
+            try {
+                if (
+                    value[column]
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(search.toString().toLowerCase()) >= 0 &&
+                    !included
+                ) {
+                    results.push(value);
+                    included = true;
+                }
+            } catch (e) {}
         });
     });
     return results;

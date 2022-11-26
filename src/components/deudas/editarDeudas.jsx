@@ -1,12 +1,12 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
-import { getDeuda, getUsers, getProducts } from "../../js/getData";
+//import { getDeuda, getUsers, getProducts } from "../../js/getData";
 
 function EditarDeuda() {
     let { idDeuda } = useParams();
-    let deuda = getDeuda(idDeuda);
-    let datosProductos = getProducts("url", {}, "get", {});
-    let datosClientes = getUsers("url", {}, "get", {});
+    // let deuda = getDeuda(idDeuda);
+    // let datosProductos = getProducts("url", {}, "get", {});
+    // let datosClientes = getUsers("url", {}, "get", {});
     return (
         <div className="container">
             <NavbarGestion />
@@ -22,7 +22,7 @@ function EditarDeuda() {
                         placeholder="ID"
                         aria-label="ID"
                         aria-describedby="basic-addon1"
-                        defaultValue={deuda.id}
+                        //defaultValue={deuda.id}
                         required={true}
                         disabled
                     />
@@ -34,24 +34,24 @@ function EditarDeuda() {
                     required={true}
                 >
                     <option disabled>Selecciona el cliente</option>
-                    <option value={deuda.cliente}>{deuda.cliente}</option>
-                    {datosClientes.map(function (value, index) {
+                    <option></option>
+                    {/* {datosClientes.map(function (value, index) {
                         return (
                             <option>
                                 {value.firstName} {value.lastName}
                             </option>
                         );
-                    })}
+                    })} */}
                 </select>
                 <select
                     className="form-select input-group mb-3"
                     required={true}
                 >
                     <option disabled>Selecciona el producto</option>
-                    <option value={deuda.productos}>{deuda.productos}</option>
-                    {datosProductos.map(function (value, index) {
+                    <option ></option>
+                    {/* {datosProductos.map(function (value, index) {
                         return <option>{value.title}</option>;
-                    })}
+                    })} */}
                 </select>
                 <div className="infobutton">
                     <button type="submit" className="btn btn-info">

@@ -1,10 +1,10 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import { useParams } from "react-router-dom";
-import { getProducto } from "../../js/getData";
+// import { getProducto } from "../../js/getData";
 
 function EliminarProducto(props) {
     let { idProducto } = useParams();
-    let producto = getProducto(idProducto);
+    // let producto = getProducto(idProducto);
     return (
         <div className="container">
             <NavbarGestion />
@@ -22,7 +22,7 @@ function EliminarProducto(props) {
                         placeholder="ID"
                         aria-label="ID"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.id}
+                        //defaultValue={producto.id}
                         required={true}
                         readOnly={true}
                         disabled
@@ -38,7 +38,7 @@ function EliminarProducto(props) {
                         placeholder="Nombre"
                         aria-label="Nombre"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.title}
+                        //defaultValue={producto.title}
                         required={true}
                         readOnly={true}
                         disabled
@@ -56,7 +56,7 @@ function EliminarProducto(props) {
                         placeholder="Descripción"
                         aria-label="Descripción"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.description}
+                        //defaultValue={producto.description}
                         required={true}
                         readOnly={true}
                         disabled
@@ -74,7 +74,7 @@ function EliminarProducto(props) {
                         placeholder="Precio"
                         aria-label="Precio"
                         aria-describedby="basic-addon1"
-                        defaultValue={producto.price}
+                        //defaultValue={producto.price}
                         required={true}
                         readOnly={true}
                         disabled

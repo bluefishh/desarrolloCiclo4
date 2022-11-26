@@ -1,9 +1,7 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import MainPage from "../table/mainPage";
-import { getProducts } from "../../js/getData";
 
 function GestionarProductos(props) {
-    let datosTabla = getProducts("url", {}, "get", {});
     return (
         <div className="container-fluid">
             <NavbarGestion />
@@ -12,9 +10,9 @@ function GestionarProductos(props) {
                     <div className="col-6 table-responsive">
                         <MainPage
                             name={"Productos"}
-                            data={datosTabla}
+                            data={props.datosTabla}
                             path={"/gestionarproductos"}
-                            colums={["id", "title", "description", "price"]}
+                            colums={["_id", "title", "description", "price"]}
                             columsAlias={[
                                 "ID",
                                 "Nombre",

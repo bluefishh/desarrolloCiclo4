@@ -1,9 +1,8 @@
 import NavbarGestion from "../navbar/navbarGestion";
 import MainPage from "../table/mainPage";
-import { getUsers } from "../../js/getData";
 
 function GestionarClientes(props) {
-    let datosTabla = getUsers("url", {}, "get", {});
+    console.log(props.datosTabla);
     return (
         <div className="container-fluid">
             <NavbarGestion />
@@ -12,17 +11,17 @@ function GestionarClientes(props) {
                     <div className="col-6 table-responsive">
                         <MainPage
                             name={"Clientes"}
-                            data={datosTabla}
+                            data={props.datosTabla}
                             path={"/gestionarclientes"}
                             colums={[
-                                "id",
+                                "_id",
                                 "firstName",
                                 "lastName",
                                 "email",
                                 "phone",
                             ]}
                             columsAlias={[
-                                "# Documento",
+                                "ID",
                                 "Nombres",
                                 "Apellidos",
                                 "Correo electrónico",
